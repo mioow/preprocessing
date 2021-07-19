@@ -43,6 +43,6 @@ for index, row in img_list.iterrows():
 
         #if cv.waitKey(1)&0xFF == 27: # esc 누르면 닫음
         break
-    bar.update(index-1)
+    bar.update(index)
 
 print("process complete")
