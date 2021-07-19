@@ -1,6 +1,8 @@
 import cv2 as cv
-import file_module
+import progressbar
 import numpy as np
+
+import file_module
 
 '''
 def nothing(x):
@@ -12,6 +14,7 @@ save_dir = "E:/data/masked-Image"
 
 img_list = file_module.loadImage(img_dir)
 
+bar = progressbar.ProgressBar(maxval=len(img_list)).start()
 for index, row in img_list.iterrows():
 
     img_path = img_dir +'/'+ row['file_name']
@@ -40,5 +43,6 @@ for index, row in img_list.iterrows():
 
         #if cv.waitKey(1)&0xFF == 27: # esc 누르면 닫음
         break
+    bar.update(index-1)
 
 print("process complete")

@@ -10,11 +10,10 @@ def loadImage(path):
 
     img_list = pd.DataFrame(file_list,columns=['file_name'])
 
-    print(img_list)
-
     return img_list
 
 ## 해당 디렉토리에서 중복을 검사하고 이미지를 저장
+### 현재 미구현
 
 def saveImage(img, path):
     path
